@@ -10,3 +10,9 @@
 - **Verified locally:** actual rsync transfers and restores, multiple histories, metadata and symlink behavior, safe failure, corruption refusal, no-overwrite race, 250-file workload, runnable demo; see TEST-RESULTS.md for the precise environment and commands/results.
 - **Not checked:** 50k files/10GB realistic performance, other Linux filesystems, OS matrix, Python 3.9/rsync 3.2 actual runtime, kernel crash/power-off recovery.
 - **Next action:** read back GitHub commits after publishing; if performance becomes material, test representative 50k-file/10GB filesystem before altering architecture.
+
+## 2026-11-01 GitHub handoff checkpoint
+
+- **GitHub publication:** successful, commit `5ef870ac34198e7f5eae36cc79400fcb23c9298f`.
+- **Verified:** remote tree includes all 13 expected project files; exact Git blob hash match for program, tests, demo and complete usage guide; follow-up Python syntax check and end-to-end demo passed locally.
+- **Next action:** on the target Linux host, run documented integration checks and measure a representative large-file workload before claiming 50k-file/10GB performance.

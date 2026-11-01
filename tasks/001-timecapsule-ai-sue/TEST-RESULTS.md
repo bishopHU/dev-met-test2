@@ -36,3 +36,11 @@ python3 -m py_compile timecapsule.py
 python3 -m unittest discover -s tests -v
 sh examples/demo.sh
 ```
+
+## GitHub read-back and follow-up execution (2026-11-01)
+
+- Missing application source, full README, integration tests, shell demo, `.gitignore`, and empty `tests/__init__.py` were committed in `5ef870ac34198e7f5eae36cc79400fcb23c9298f`. The `main` branch fast-forward was confirmed.
+- GitHub tree read-back showed 13 project/root files, including all expected source and test files. Git blob SHA-1 for `timecapsule.py`, `tests/test_timecapsule.py`, `examples/demo.sh`, `.gitignore`, `tests/__init__.py`, and the complete task README matched `git hash-object` on the local originals. This is persistence/integrity evidence, not a fresh code test.
+- Locally reran `python3 -m py_compile timecapsule.py`: **PASS**.
+- Locally reran `sh examples/demo.sh`: **PASS**, two snapshots created and both restored and verified.
+- The 14 automated tests were **not rerun** as a single suite in this follow-up; previous subset evidence above still applies.
